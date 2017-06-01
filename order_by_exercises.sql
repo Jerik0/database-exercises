@@ -4,10 +4,11 @@ SELECT 'All *male* employees who''s first name is Irena, Vidya, or Maya' AS '';
 SELECT first_name, last_name, gender
 FROM employees
 WHERE (
-        first_name = 'Irena'
-        OR first_name = 'Vidya'
-        OR first_name = 'Maya')
-      AND gender = 'M';
+  first_name = 'Irena'
+  OR first_name = 'Vidya'
+  OR first_name = 'Maya')
+AND gender = 'M'
+ORDER BY first_name;
 
 SELECT 'All employees who''s last name begins OR ends with ''E''' AS '';
 SELECT first_name, last_name
