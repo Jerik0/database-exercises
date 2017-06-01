@@ -17,11 +17,11 @@ WHERE last_name LIKE 'E%'
       OR last_name LIKE '%e';
 
 SELECT 'All employees who''s last name begins AND ends with ''E''' AS '';
-SELECT DISTINCT last_name
+SELECT DISTINCT first_name, last_name
 FROM employees
 WHERE last_name LIKE 'E%'
       AND last_name LIKE '%e'
-GROUP BY last_name;
+GROUP BY first_name, last_name;
 
 SELECT 'All employees who were hired in the 90''s AND born on Christmas' AS '';
 SELECT *
