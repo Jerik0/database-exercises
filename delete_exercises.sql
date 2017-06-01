@@ -1,8 +1,11 @@
 USE codeup_test_db;
 
+SELECT 'All albums released after 1991' AS '';
 SELECT name FROM albums WHERE release_date > '1991';
 
-SELECT name FROM albums WHERE genre LIKE '%rock%';
+SELECT 'All albums in the pop genre' AS '';
+SELECT name FROM albums WHERE genre LIKE '%pop%';
 
-SELECT name FROM albums WHERE artist LIKE '%beatles%';
+SELECT 'All albums released by Celine Dion' AS '';
+SELECT name FROM albums WHERE artist LIKE '%celine%';
 
