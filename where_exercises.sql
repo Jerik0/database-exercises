@@ -21,7 +21,7 @@ FROM employees
 WHERE last_name LIKE 'E%'
 AND last_name LIKE '%e';
 
-SELECT 'All employees hired in the 90''s' AS '';
+SELECT 'All employees who were hired in the 90''s AND born on Christmas' AS '';
 SELECT *
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' and '1999-12-31'
@@ -32,7 +32,7 @@ SELECT *
 FROM employees
 WHERE birth_date LIKE '%-12-25';
 
-SELECT 'All employees who''s last name contains the letter ''q''' AS '';
+SELECT 'All employees who''s last name contains the letter ''q'' but not ''qu''.' AS '';
 SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%'
