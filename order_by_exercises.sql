@@ -8,7 +8,7 @@ WHERE (
   OR first_name = 'Vidya'
   OR first_name = 'Maya')
 AND gender = 'M'
-ORDER BY last_name, first_name;
+ORDER BY last_name DESC, first_name DESC;
 
 SELECT 'All employees who''s last name begins OR ends with ''E''' AS '';
 SELECT first_name, last_name
@@ -21,7 +21,7 @@ SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE 'E%'
       AND last_name LIKE '%e'
-ORDER BY emp_no;
+ORDER BY emp_no DESC;
 
 SELECT 'All employees who were hired in the 90''s AND born on Christmas' AS '';
 SELECT *
