@@ -27,7 +27,8 @@ SELECT 'All employees who were hired in the 90''s AND born on Christmas' AS '';
 SELECT *
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' and '1999-12-31'
-      AND birth_date LIKE '%-12-25';
+      AND birth_date LIKE '%-12-25'
+ORDER BY birth_date ASC, hire_date DESC;
 
 SELECT 'All employees who were born on Christmas' AS '';
 SELECT *
