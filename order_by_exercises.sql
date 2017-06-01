@@ -8,7 +8,7 @@ WHERE (
   OR first_name = 'Vidya'
   OR first_name = 'Maya')
 AND gender = 'M'
-ORDER BY first_name;
+ORDER BY first_name, last_name;
 
 SELECT 'All employees who''s last name begins OR ends with ''E''' AS '';
 SELECT first_name, last_name
