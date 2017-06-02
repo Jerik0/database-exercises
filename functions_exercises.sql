@@ -30,8 +30,9 @@ WHERE hire_date BETWEEN '1990-01-01' and '1999-12-31'
 ORDER BY birth_date ASC, hire_date DESC;
 
 SELECT 'All employees who''s last name contains the letter ''q'' but not ''qu''.' AS '';
-SELECT last_name
+SELECT CONCAT(COUNT(last_name), ' People share the last name ', last_name)
 FROM employees
 WHERE last_name LIKE '%q%'
-      AND NOT last_name LIKE '%qu%'
-GROUP BY last_name;
+      AND last_name NOT LIKE '%qu%'
+GROUP BY last_name
+ORDER BY last_name;
