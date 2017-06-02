@@ -10,7 +10,7 @@ WHERE (
 GROUP BY gender;
 
 SELECT 'All employees who''s last name begins OR ends with ''E''' AS '';
-SELECT first_name, last_name
+SELECT CONCAT(first_name, ' ', last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
       OR last_name LIKE '%e';
@@ -23,17 +23,11 @@ WHERE last_name LIKE 'E%'
 GROUP BY first_name, last_name;
 
 SELECT 'All employees who were hired in the 90''s AND born on Christmas' AS '';
-SELECT *
+SELECT CONCAT(CONCAT(first_name, ' ', last_name, ' - '),'Days worked: ', DATEDIFF(NOW(),hire_date))
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' and '1999-12-31'
       AND birth_date LIKE '%-12-25'
-ORDER BY birth_date ASC, hire_date DESC
-LIMIT 5 OFFSET 45;
-
-SELECT 'All employees who were born on Christmas' AS '';
-SELECT *
-FROM employees
-WHERE birth_date LIKE '%-12-25';
+ORDER BY birth_date ASC, hire_date DESC;
 
 SELECT 'All employees who''s last name contains the letter ''q'' but not ''qu''.' AS '';
 SELECT last_name
